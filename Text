@@ -1,0 +1,15 @@
+Here in this section we will use Rect-Rest countries API to fetch, load and display the data
+
+## Most common thing ---->
+
+we will use 6 things --->
+
+1. Component
+2. JSX
+3. props
+4. Event Handler
+5. useState
+6. useEffect
+
+Almost in each and every React app we will use these 6 items to structure our main react
+app..
