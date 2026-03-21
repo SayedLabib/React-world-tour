@@ -19,7 +19,7 @@ const Countries = () => {
         <div>
             <h4>Countries: {countries.length}</h4>
             {
-                countries.map(country => <Country key={country.currencies.[0]} country={country}></Country>)
+                countries.map(country => <Country key={country.currencies.name} country={country}></Country>)
             }
         </div>
     );
