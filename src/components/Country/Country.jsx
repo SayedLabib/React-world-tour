@@ -11,6 +11,7 @@ const Country = ({country, handleVisitedCountry}) => {
     }
 
     const {name, capital} = country;
+    
     return (
         <div className='box'>
             <h4>Name: {name.common} </h4>
@@ -21,7 +22,7 @@ const Country = ({country, handleVisitedCountry}) => {
             { visited ? <p>I have visited {name.common} country.</p> : <p>I have not visited {name.common} country.</p>}
 
             <br />
-            <button onClick={() => handleVisitedCountry(country.common)}>
+            <button onClick={() => handleVisitedCountry(country.name.common)}>
                 Country visited
             </button>
         </div>

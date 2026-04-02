@@ -30,6 +30,13 @@ const Countries = () => {
             <h4>Countries: {countries.length}</h4>
 
             <h4>Visited Countries: {visitedCountries.length}</h4>
+            {
+               <ul>
+                {
+                    visitedCountries.map((country, index) => <li key={index}>{country}</li>)
+                }
+               </ul>
+            }
 
             <div className="country-container">
             {
