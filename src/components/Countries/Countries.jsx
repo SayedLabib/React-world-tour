@@ -6,6 +6,9 @@ const Countries = () => {
 
     const [countries, setCountries] = useState([]); ;
 
+    const [visitedCountries, setVisitedCountries] = useState([]);
+
+
     useEffect(()=>{
 
        fetch('https://restcountries.com/v3.1/all?fields=name,capital,currencies')
@@ -15,13 +18,28 @@ const Countries = () => {
 
     },[])
 
+    const handleVisitedCountry = country => {
+        console.log("country added");
+        setVisitedCountries([...visitedCountries, country]);
+    }
+
     return (
+
+    
         <div>
             <h4>Countries: {countries.length}</h4>
 
+            <h4>Visited Countries: {visitedCountries.length}</h4>
+
             <div className="country-container">
             {
-                countries.map(country => <Country key={country.currencies.name} country={country}></Country>)
+                countries.map(country => <Country 
+                    key={country.currencies.name} 
+                    country={country}
+                    handleVisitedCountry={handleVisitedCountry}    
+                    >
+                     
+                    </Country>)
             }
             </div>
 
